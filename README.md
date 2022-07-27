@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# NY Times Top Stories Reader
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is take home project based off [this prompt](https://mod4.turing.edu/projects/take_home/take_home_fe).
 
-## Available Scripts
+This uses the [NY Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview).
 
-In the project directory, you can run:
+MVP requires showing:
 
-### `npm start`
+- A list of articles
+- A “detailed” view for each article (as opposed to summary/list view)
+- Articles in the list must link to the detailed article view you create
+- Some sort of search, filter, OR sort
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Using the App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As a user:
+ - visit the page (here)[https://ny-times-reader.herokuapp.com/]
 
-### `npm test`
+As a developer:
+ - pull down this code locally
+ - run tests using `npm test`
+ - 
+## Developing the App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tech Stack:
 
-### `npm run build`
+- Manage the API with [NYT Developer Site](https://developer.nytimes.com/my-apps/14d62669-1fc1-40ec-8fc3-278084a899eb).
+- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Manages the API key securely using [react-scripts](https://create-react-app.dev/docs/adding-custom-environment-variables/).
+- Integration Testing through [Cypress](https://www.cypress.io/).
+- Semantic HTML, CSS
+### Commands
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  `npm start`
+ - Runs the app in the development mode.\
+ - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - The page will reload when you make changes.\
+ - You may also see any lint errors in the console.
+- `npm test`
+ - Launches the test runner in the interactive watch mode.\
+ - See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `npm run build`
+  - Builds the app for production to the `build` folder.\
+  - It correctly bundles React in production mode and optimizes the build for the best performance.
+- [deployment](https://facebook.github.io/create-react-app/docs/deployment) 
+  - hosted on Heroku
