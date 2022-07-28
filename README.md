@@ -14,7 +14,7 @@ MVP requires showing:
 ## Using the App
 
 As a user:
- - visit the page (here)[https://ny-times-reader.herokuapp.com/]
+ - visit the page [here](https://ny-times-reader.herokuapp.com/)
 
 As a developer:
  - pull down this code locally
@@ -44,3 +44,14 @@ As a developer:
   - It correctly bundles React in production mode and optimizes the build for the best performance.
 - [deployment](https://facebook.github.io/create-react-app/docs/deployment) 
   - hosted on Heroku
+
+## Future Iterations
+
+Since this is not a production app and just practice, less optimal choices wer made for the sake of time. However, next steps or a more thorough process would include:
+
+- Improve performance using [caching/memoization](https://www.smashingmagazine.com/2020/07/custom-react-hook-fetch-cache-data/0)
+- Hide api keys from client by spinning up a more robust server for this app
+  - This would act as the middle man which privately holds and talks to our 3rd party API and contains the API key. This app then would only talk to this new related server, not to the API directly.
+  - This stops us having to send the API key over to the client in the Webpack build in order to access the articles.
+  
+  
