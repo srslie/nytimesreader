@@ -1,16 +1,23 @@
-import './App.css';
-import './Article';
-import './Section';
-import React from 'react';
+import '../styles/App.css';
+import {Section} from './Section';
+import {Home} from './Home'
+import {React, useState, useEffect} from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
+import { getHomeArticles } from '../helpers';
 
+export const App = () => {
+  const [articles, setArticles] = useState([]);
+  useEffect( () => {
+    const data = getHomeArticles()
+    setArticles(data)
+  }, [articles])
 
-const App = () => {
+  console.log(articles)
   return (
   <Router>
     <div className="App">
@@ -27,14 +34,16 @@ const App = () => {
         </li>
       </ul>
   
-      <Switch>
-        <Route path="/sections">
-          <Section />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route 
+          path="/sections" 
+          element={<Section props={articles}/>}
+        />
+        <Route
+          path="/"
+          element={<Home props={articles}/>}
+        />
+      </Routes>
     </div>
   </Router>
   );

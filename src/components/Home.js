@@ -1,13 +1,11 @@
 import React from 'react';
-import './styles.Home.css';
-import Section from './Section'
+import '../styles/Home.css';
+import {Section} from './Section'
 
-export const Home = () => {
+export const Home = (props) => {
   return (
     <div className="home">
-      <Section />
-      <Section />
-      <Section />
+      <Section props={props}/>
     </div>
   )
 }
